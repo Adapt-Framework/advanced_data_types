@@ -11,6 +11,7 @@ $data_types = array(
     array(
         'bundle_name' => 'advanced_data_types',
         'name' => 'xml',
+        'based_on_data_type' => 'text',
         'validator' => 'xml',
         'formatter' => null,
         'unformatter' => null,
@@ -21,6 +22,7 @@ $data_types = array(
     array(
         'bundle_name' => 'advanced_data_types',
         'name' => 'ip4',
+        'based_on_data_type' => 'varchar(15)',
         'validator' => 'ip4',
         'formatter' => null,
         'unformatter' => null,
@@ -31,6 +33,7 @@ $data_types = array(
     array(
         'bundle_name' => 'advanced_data_types',
         'name' => 'ip6',
+        'based_on_data_type' => 'varchar(256)',
         'validator' => 'ip6',
         'formatter' => null,
         'unformatter' => null,
@@ -41,6 +44,7 @@ $data_types = array(
     array(
         'bundle_name' => 'advanced_data_types',
         'name' => 'email_address',
+        'based_on_data_type' => 'varchar(256)',
         'validator' => 'email_address',
         'formatter' => null,
         'unformatter' => null,
@@ -51,6 +55,7 @@ $data_types = array(
     array(
         'bundle_name' => 'advanced_data_types',
         'name' => 'name',
+        'based_on_data_type' => 'varchar(64)',
         'validator' => 'name',
         'formatter' => 'name',
         'unformatter' => null,
