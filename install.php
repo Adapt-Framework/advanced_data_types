@@ -84,4 +84,5 @@ $sql->insert_into('data_type', array_keys($data_types[0]));
 foreach($data_types as $type) $sql->values(array_values($type));
 $sql->execute();
 
+
 ?>
