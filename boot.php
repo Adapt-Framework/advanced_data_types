@@ -11,7 +11,17 @@ $adapt = $GLOBALS['adapt'];
 $adapt->sanitize->add_validator(
     'xml',
     function($value){
-        if ((is_object($value) && $value instanceof xml) || (is_string($value) && xml::is_xml($value))){
+        if ((is_object($value) && $value instanceof \frameworks\adapt\xml) || (is_string($value) && \frameworks\adapt\xml::is_xml($value))){
+            return true;
+        }
+        return false;
+    }
+);
+
+$adapt->sanitize->add_validator(
+    'html',
+    function($value){
+        if ((is_object($value) && $value instanceof \frameworks\adapt\html) || (is_string($value) && \frameworks\adapt\html::is_html($value))){
             return true;
         }
         return false;

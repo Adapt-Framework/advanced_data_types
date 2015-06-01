@@ -21,6 +21,17 @@ $data_types = array(
     ),
     array(
         'bundle_name' => 'advanced_data_types',
+        'name' => 'html',
+        'based_on_data_type' => 'text',
+        'validator' => 'html',
+        'formatter' => null,
+        'unformatter' => null,
+        'datetime_format' => null,
+        'max_length' => null,
+        'date_created' => null
+    ),
+    array(
+        'bundle_name' => 'advanced_data_types',
         'name' => 'ip4',
         'based_on_data_type' => 'varchar(15)',
         'validator' => 'ip4',
