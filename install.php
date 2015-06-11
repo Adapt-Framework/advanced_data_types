@@ -84,9 +84,9 @@ foreach($data_types as &$data_type){
     $keys = array_keys($data_type);
     foreach($keys as $key){
         if ($key == 'date_created'){
-            $data_type['date_created'] = new sql('now()');
+            $data_type['date_created'] = new \frameworks\adapt\sql('now()');
         }elseif(is_null($data_type[$key])){
-            $data_type[$key] = new sql('null');
+            $data_type[$key] = new \frameworks\adapt\sql('null');
         }
     }
 }

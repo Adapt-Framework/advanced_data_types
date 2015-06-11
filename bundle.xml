@@ -10,5 +10,8 @@
         <copyright>2015 Adapt Framework</copyright>
         <license>MIT</license>
         <website>http://www.adaptframework.com/documentation/extensions/advanced_data_types</website>
+        <depends_on>
+            <bundle>adapt</bundle>
+        </depends_on>
     </bundle>
 </adapt_framework>
