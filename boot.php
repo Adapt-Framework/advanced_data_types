@@ -49,7 +49,7 @@ $adapt->sanitize->add_validator(
 );
 
 /* Add formatters */
-$adapt->sanitize->add_formatter(
+$adapt->sanitize->add_format(
     'name',
     function($value){
         $value = strtolower($value);
@@ -66,7 +66,30 @@ $adapt->sanitize->add_formatter(
             $value = implode($break, $parts);
         }
         return $value;
-    }
+    },
+    "function(value){
+        if (typeof value === \"string\"){
+            var breaks = [\" \", \"'\", \"-\"];
+            value = value.toLowerCase();
+            for(var i = 0; i < breaks.length; i++){
+                var parts = value.split(breaks[i]);
+                for(var j = 0; j < parts.length; j++){
+                    if (parts[j].length == 1){
+                        parts[j] = parts[j].toUpperCase();
+                    }else{
+                        if (parts[j].length > 1){
+                            parts[j] = parts[j].substr(0, 1).toUpperCase() + parts[j].substr(1);
+                        }
+                    }
+                }
+                
+                value = parts.join(breaks[i]);
+            }
+            
+        }
+        
+        return value;
+    }"
 );
 
 

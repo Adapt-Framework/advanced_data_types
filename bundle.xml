@@ -13,5 +13,6 @@
         <depends_on>
             <bundle>adapt</bundle>
         </depends_on>
+        <schema_installed>Yes</schema_installed>
     </bundle>
 </adapt_framework>
