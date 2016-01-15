@@ -77,7 +77,7 @@ $data_types = array(
 );
 
 /* Set the data types */
-$adapt->data_source->data_types = array_merge($adapt->data_source->data_types, $data_types);
+//$adapt->data_source->data_types = array_merge($adapt->data_source->data_types, $data_types);
 
 /* Add the new types to the data_type table */
 foreach($data_types as &$data_type){
@@ -95,5 +95,7 @@ $sql->insert_into('data_type', array_keys($data_types[0]));
 foreach($data_types as $type) $sql->values(array_values($type));
 $sql->execute();
 
+/* Reload the data types */
+$adapt->data_source->load_schema();
 
 ?>
