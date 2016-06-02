@@ -3,7 +3,7 @@
     <bundle>
         <name>advanced_data_types</name>
         <label>Advanced Data Types</label>
-        <type>extension</type>
+        <type>data_type</type>
         <version>1.0.0</version>
         <namespace>\adapt\advanced_data_types</namespace>
         <description></description>
@@ -13,7 +13,7 @@
         <depends_on>
             <bundle>
                 <name>adapt</name>
-                <version>1.0</version>
+                <version>2.0</version>
             </bundle>
         </depends_on>
         <schema>
