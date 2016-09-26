@@ -50,6 +50,11 @@
                         <validator>name</validator>
                         <formatter>name</formatter>
                     </record>
+                    <record>
+                        <name>json</name>
+                        <based_on_data_type>text</based_on_data_type>
+                        <validator>json</validator>
+                    </record>
                 </table>
             </add>
         </schema>

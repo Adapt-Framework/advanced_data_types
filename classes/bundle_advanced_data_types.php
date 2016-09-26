@@ -22,7 +22,12 @@ namespace adapt\advanced_data_types{
                             return true;
                         }
                         return false;
+                    },
+                    "
+                    function(value){
+                        return /<[a-z][\s\S]*>/i.test(value);
                     }
+                    "
                 );
                 
                 $this->sanitize->add_validator(
@@ -32,7 +37,12 @@ namespace adapt\advanced_data_types{
                             return true;
                         }
                         return false;
+                    },
+                    "
+                    function(value){
+                        return /<[a-z][\s\S]*>/i.test(value);
                     }
+                    "
                 );
                 
                 $this->sanitize->add_validator(
@@ -53,6 +63,23 @@ namespace adapt\advanced_data_types{
                 $this->sanitize->add_validator(
                     'name',
                     '^[A-Za-z]+([ \'-][A-Za-z]+)*$'
+                );
+                
+                $this->sanitize->add_validator(
+                    'json',
+                    function($value){
+                        return is_json($value);
+                    }.
+                    "
+                    function(value){
+                        try {
+                            JSON.parse(str);
+                        } catch (e) {
+                            return false;
+                        }
+                        return true;
+                    }
+                    "
                 );
                 
                 /* Add formatters */
