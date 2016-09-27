@@ -69,7 +69,7 @@ namespace adapt\advanced_data_types{
                     'json',
                     function($value){
                         return is_json($value);
-                    }.
+                    },
                     "
                     function(value){
                         try {
