@@ -82,6 +82,12 @@ namespace adapt\advanced_data_types{
                     "
                 );
                 
+                $this->sanitize->add_validator(
+                    'percent',
+                    '^-?(\d+(\.\d*)|\.\d+)$'
+                );
+                
+                
                 /* Add formatters */
                 $this->sanitize->add_format(
                     'name',
@@ -126,6 +132,27 @@ namespace adapt\advanced_data_types{
                     }"
                 );
 
+                
+                $this->sanitize->add_format(
+                    'percent',
+                    function($value) {
+                        if (is_numeric($value)) return $value * 100;
+                    },
+                    'function(value){
+                        return parseFloat(value) * 100;
+                    }'
+                );
+                
+                /* Add unformatters */
+                $this->sanitize->add_unformat(
+                    'percent',
+                    function($value) {
+                        return floatval($value) / 100;
+                    },
+                    'function(value){
+                        return parseFloat(value) / 100;
+                    }'
+                );
                 
                 return true;
             }
