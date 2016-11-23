@@ -137,13 +137,21 @@ namespace adapt\advanced_data_types{
                     'percent',
                     function($value) {
                         if (is_numeric($value)){
-                            return $value . "%";
+                            if ($value){
+                                return $value . "%";
+                            }
+                            
+                            return '';
                         }
                         
                         return '0%';
                     },
                     "function(value){
-                        return value.toString() + '%';
+                        if (value){
+                            return value.toString() + '%';
+                        }
+                        
+                        return '';
                     }"
                 );
                 
