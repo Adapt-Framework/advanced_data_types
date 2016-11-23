@@ -84,7 +84,7 @@ namespace adapt\advanced_data_types{
                 
                 $this->sanitize->add_validator(
                     'percent',
-                    '^-?(\d+(\.\d*)|\.\d+)$'
+                    '^([0-9]+(\.[0-9]+)?)$'
                 );
                 
                 
@@ -136,22 +136,26 @@ namespace adapt\advanced_data_types{
                 $this->sanitize->add_format(
                     'percent',
                     function($value) {
-                        if (is_numeric($value)) return $value * 100;
+                        if (is_numeric($value)){
+                            return $value . "%";
+                        }
+                        
+                        return '0%';
                     },
-                    'function(value){
-                        return parseFloat(value) * 100;
-                    }'
+                    "function(value){
+                        return value.toString() + '%';
+                    }"
                 );
                 
                 /* Add unformatters */
                 $this->sanitize->add_unformat(
                     'percent',
                     function($value) {
-                        return floatval($value) / 100;
+                        return preg_replace("/[^.0-9]/", "", $value);
                     },
-                    'function(value){
-                        return parseFloat(value) / 100;
-                    }'
+                    "function(value){
+                        return value.toString().replace(/[^.0-9]/g, '');
+                    }"
                 );
                 
                 return true;

@@ -4,7 +4,7 @@
         <name>advanced_data_types</name>
         <label>Advanced Data Types</label>
         <type>data_type</type>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
         <namespace>\adapt\advanced_data_types</namespace>
         <description>Extending the default data types to include validators for email, xml, IP addresses (v4 and v6) and more.</description>
         <copyright>2016 Matt Bruton</copyright>
