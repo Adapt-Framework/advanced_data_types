@@ -4,12 +4,23 @@
         <name>advanced_data_types</name>
         <label>Advanced Data Types</label>
         <type>data_type</type>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
+        <version_status>release</version_status>
+        <availability>public</availability>
         <namespace>\adapt\advanced_data_types</namespace>
         <description>Extending the default data types to include validators for email, xml, IP addresses (v4 and v6) and more.</description>
         <copyright>2016 Matt Bruton</copyright>
         <license>MIT</license>
-        <website>https://www.adaptframework.com/bundles/advanced_data_types</website>
+        <vendor>
+            <name>Adapt Framework</name>
+            <website>https://www.adaptframework.com</website>
+        </vendor>
+        <authors>
+            <author>
+                <name>Matt Bruton</name>
+                <email>matt.bruton@gmail.com</email>
+            </author>
+        </authors>
         <depends_on>
             <bundle>
                 <name>adapt</name>
