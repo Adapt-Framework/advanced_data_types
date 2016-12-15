@@ -64,6 +64,11 @@ namespace adapt\advanced_data_types{
                     'name',
                     '^[A-Za-z]+([ \'-][A-Za-z]+)*$'
                 );
+
+                $this->sanitize->add_validator(
+                    'hostprefix',
+                    '^[a-z]+$'
+                );
                 
                 $this->sanitize->add_validator(
                     'json',
