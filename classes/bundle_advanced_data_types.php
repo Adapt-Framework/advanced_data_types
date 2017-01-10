@@ -103,7 +103,7 @@ namespace adapt\advanced_data_types{
                             $parts = explode($break, $value);
                             for($i = 0; $i < count($parts); $i++){
                                 if (strlen($parts[$i]) == 1){
-                                    $parts[$i] = strtoupper($part[$i]);
+                                    $parts[$i] = strtoupper($parts[$i]);
                                 }elseif(strlen($parts[$i]) > 1){
                                     $parts[$i] = strtoupper(substr($parts[$i], 0, 1)) . substr($parts[$i], 1);
                                 }

@@ -4,7 +4,7 @@
         <name>advanced_data_types</name>
         <label>Advanced Data Types</label>
         <type>data_type</type>
-        <version>1.0.5</version>
+        <version>1.0.6</version>
         <version_status>release</version_status>
         <availability>public</availability>
         <namespace>\adapt\advanced_data_types</namespace>
