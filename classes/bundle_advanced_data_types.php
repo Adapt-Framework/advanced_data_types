@@ -164,6 +164,9 @@ namespace adapt\advanced_data_types{
                 $this->sanitize->add_unformat(
                     'percent',
                     function($value) {
+                        if ($value === null || $value == '') {
+                            return null;
+                        }
                         return preg_replace("/[^.0-9]/", "", $value);
                     },
                     "function(value){
