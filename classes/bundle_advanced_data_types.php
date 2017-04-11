@@ -146,10 +146,10 @@ namespace adapt\advanced_data_types{
                                 return $value . "%";
                             }
                             
-                            return '';
+                            return null;
                         }
                         
-                        return '0%';
+                        return null;
                     },
                     "function(value){
                         if (value){
