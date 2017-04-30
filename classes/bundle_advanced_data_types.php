@@ -16,6 +16,18 @@ namespace adapt\advanced_data_types{
                 
                 /* Add validators */
                 $this->sanitize->add_validator(
+                    'username',
+                    function($value){
+                        return preg_match("/^[A-Za-z0-9]+[-_A-Za-z0-9]+[A-Za-z0-9]+$/", $value);
+                    },
+                    "
+                    function(value){
+                        return /^[A-Za-z0-9]+[-_A-Za-z0-9]+[A-Za-z0-9]+$/i.test(value);
+                    }
+                    "
+                );
+                
+                $this->sanitize->add_validator(
                     'xml',
                     function($value){
                         if ((is_object($value) && $value instanceof \adapt\xml) || (is_string($value) && \adapt\xml::is_xml($value))){
