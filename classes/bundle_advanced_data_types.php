@@ -69,7 +69,7 @@ namespace adapt\advanced_data_types{
                 
                 $this->sanitize->add_validator(
                     'email_address',
-                    '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+                    '^[\'a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
                 );
                 
                 $this->sanitize->add_validator(
