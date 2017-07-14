@@ -75,7 +75,7 @@
                     </record>
                     <record>
                         <name>username</name>
-                        <based_on_data_type>varchar(32)</based_on_data_type>
+                        <based_on_data_type>varchar(64)</based_on_data_type>
                         <validator>username</validator>
                     </record>
                     <record>
