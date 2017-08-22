@@ -71,7 +71,7 @@ namespace adapt\advanced_data_types{
                     'email_address',
                     '^[\'a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
                 );
-                
+
                 $this->sanitize->add_validator(
                     'name',
                     '^[A-Za-z]+([ \'-][A-Za-z]+)*$'
@@ -125,6 +125,7 @@ namespace adapt\advanced_data_types{
                         return $value;
                     },
                     "function(value){
+                        console.log(value);
                         if (typeof value === \"string\"){
                             var breaks = [\" \", \"'\", \"-\"];
                             value = value.toLowerCase();
@@ -149,7 +150,7 @@ namespace adapt\advanced_data_types{
                     }"
                 );
 
-                
+
                 $this->sanitize->add_format(
                     'percent',
                     function($value) {
